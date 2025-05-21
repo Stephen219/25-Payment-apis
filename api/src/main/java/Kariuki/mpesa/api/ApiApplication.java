@@ -1,5 +1,6 @@
 package Kariuki.mpesa.api;
 
+import Kariuki.mpesa.api.accessToken.AcknowledgeResponse;
 import okhttp3.OkHttpClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +19,14 @@ public class ApiApplication {
 		return new OkHttpClient();
 
 	}
+
+	@Bean
+	public AcknowledgeResponse getAcknowledgeResponse() {
+		AcknowledgeResponse acknowledgeResponse = new AcknowledgeResponse();
+		acknowledgeResponse.setMessage("Success");
+		return acknowledgeResponse;
+	}
+
 
 
 

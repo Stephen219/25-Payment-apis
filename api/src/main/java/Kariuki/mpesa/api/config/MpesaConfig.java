@@ -12,6 +12,12 @@ public class MpesaConfig {
     String consumerSecret;
     String grantType;
     String authEndpoint;
+    String shortCode;
+    String responseType;
+    String ValidationUrl;
+    String confirmationUrl;
+    String registerUrl;
+    String simulateTransactionEndpoint;
 
 
     public String toString() {
