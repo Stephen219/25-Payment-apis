@@ -1,4 +1,4 @@
-package Kariuki.mpesa.api.accessToken;
+package Kariuki.mpesa.api.dtos.Token;
 
 import lombok.Data;
 

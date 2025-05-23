@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 
 public class C2bResponse {
-    @JsonProperty("ConversationID")
-    private String conversationID;
+    @JsonProperty("ResponseCode")
+    private String responsecode;
 
     @JsonProperty("ResponseDescription")
     private String responseDescription;

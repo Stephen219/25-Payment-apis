@@ -9,7 +9,7 @@ import lombok.Data;
 
 
 public class RegisterUrlResponse {
-    @JsonProperty("CoversationID")
+    @JsonProperty("ResponseCode")
     private String conversationID;
 
     @JsonProperty("ResponseDescription")

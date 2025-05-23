@@ -1,6 +1,6 @@
 package Kariuki.mpesa.api;
 
-import Kariuki.mpesa.api.accessToken.AcknowledgeResponse;
+import Kariuki.mpesa.api.dtos.Token.AcknowledgeResponse;
 import okhttp3.OkHttpClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

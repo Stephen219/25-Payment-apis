@@ -18,6 +18,7 @@ public class MpesaConfig {
     String confirmationUrl;
     String registerUrl;
     String simulateTransactionEndpoint;
+    private String stkPushEndpoint;
 
 
     public String toString() {
