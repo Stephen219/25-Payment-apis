@@ -1,0 +1,3 @@
+.env
+/paystack/.env
+/paystack/__pycache__

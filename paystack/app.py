@@ -174,7 +174,7 @@ def handle_webhook():
         logger.error("PAYSTACK_SECRET not set")
         return {"message": "Server configuration error"}, 500
 
-    # Verify webhook signature
+    # to verify
     payload = request.get_data(as_text=True)
     computed_hmac = hmac.new(
         PAYSTACK_SECRET.encode(),
