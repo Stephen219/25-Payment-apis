@@ -48,4 +48,9 @@ A Flask application combining store and Paystack payment processing.
 - Select payment method (card or M-Pesa) during checkout.
 - Enter card details or mobile number on Paystack’s page.
 - Payment status is verified and updated via redirect and webhook.
-```
+
+
+## to add
+
+- ** recurrent payments**: Implement subscription plans using Paystack's recurring billing.
+- ** refund management**: Add functionality to process refunds through Paystack.
