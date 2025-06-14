@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Service Checkout</title>
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <h1>Order Service</h1>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" required><br><br>
+
+  <label for="product">Select Service:</label>
+  <select id="product">
+    <option value="1">Washing Service - $50</option>
+    <option value="2">Home Cleaning - $100</option>
+    <option value="3">Carpet Cleaning - $75</option>
+  </select><br><br>
+
+  <button id="checkout-btn">Proceed to Checkout</button>
+
+  <script>
+    document.getElementById("checkout-btn").addEventListener("click", async () => {
+      const email = document.getElementById("email").value;
+      const product_id = parseInt(document.getElementById("product").value);
+
+      if (!email) {
+        alert("Email is required");
+        return;
+      }
+
+      const response = await fetch("http://localhost:8000/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, product_id }),
+      });
+
+      const data = await response.json();
+
+      if (data.checkout_url) {
+        window.location.href = data.checkout_url;
+      } else {
+        alert("Failed to create checkout session.");
+      }
+    });
+  </script>
+</body>
+</html>
